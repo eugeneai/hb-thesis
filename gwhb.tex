@@ -1,0 +1,157 @@
+\documentclass[a4paper,14pt,final]{extreport}
+\usepackage[microtyping,fancytop,handbook,cambriamath,cpcaption,firamono]{subook}
+\usepackage{hyperref}
+\usepackage[final]{minted}
+
+\usemintedstyle{tango}
+%\usemintedstyle{bw}
+\setminted{breaklines=true,fontsize=\small,funcnamehighlighting=true}
+
+\newcommand{\aaa}[1]{{/\bfseries #1\ldots/}}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  \small Министерство науки и образования\\
+  Российской Фежерации \\
+Институт математики, экономики и информатики\\
+ФБУН <<Иркутский государственный университет>>
+\end{center}
+\vfill
+\begin{center}
+  Черкашин~Е.~А.\\[2em]
+  {
+  \Large\bfseries Как спроектировать текст\\
+выпускной квалификационной работы\\
+}
+\vspace{1em}
+\emph{учебное пособие}
+\end{center}
+\vspace{8em}
+\vfill
+\begin{center}
+  Иркутск---2017
+\end{center}
+\mbox{}
+\newpage
+
+\tableofcontents
+
+\chapter*{Введение}
+\label{cha:inro}
+
+Что-о о логической структуре ВКР, а также о логических связях в структуре информации.
+
+Структура ВКР, в целом, соответствуе структуре жизненного цикла программного обеспечения (ЖЦ ПО) \cite{lifecycle}.
+
+\chapter{Логическая структура ВКР}
+\label{cha:logstru}
+
+\chapter{Оформление текста}
+\label{cha:layout}
+
+Структура ВКР состоит из основных и дополнительных разделов.  К основным разделам относятся:
+\begin{enumerate}
+\item Титульный лист, на котором представлена информация формального характера:
+  \begin{itemize}
+  \item вуз, в котором выполнена работа,
+  \item \aaa{кафедра},
+  \item название ВКР,
+  \item автор и научный руководитель;
+  \end{itemize}
+\item Введение, где изл....;
+\item Глава, посвященная изложению теоретических аспектов работы;
+\item Глава, где рассмотрены аспеты реализации программного продукта;
+\item Заключение, в котором кратко перечисляются полученные результаты, \aaa{самокритика} и \aaa{направления дальнейшего совершенствования}.
+\item Список используемых источников (список литературы).
+\end{enumerate}
+
+\section{Текстовые объекты}
+\label{sec:objs}
+
+\subsection{Формулы}
+\label{sec:formulae}
+
+Пример правильно оформленной формулы:
+\begin{equation}
+  \label{eq:1}
+  \vec{F} = -G\frac{Mm}{|r^3|}\vec{r},
+\end{equation}
+где $\vec{F}$ -- вектор силы тяжести, действующий на материальную точку массой $m$ со стороны тела (материальной точки) массой $M$, находящегося в начале координат.  Радиус"=вектор $\vec{r}$ направлен из начала координат в цетр другого тела.  Уравнение Ньютона (\ref{eq:1}) в скалярной форме выглядит в следующем виде:
+\begin{equation*}
+  F=G\frac{Mm}{r^2},\quad r=|\vec{r}|, F=|\vec{F}|.
+\end{equation*}
+
+\subsection{Рисунки}
+\label{sec:figures}
+
+Рисунки в тексте отображаются в разрыве текста, по центру с нумерацией и подписью.
+\begin{figure}[bh]
+  \centering
+  \def\svgwidth{0.8\linewidth}
+  \input{bodies.pdf_tex}
+
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+
+  \caption{Ньютоновская система двух тел}
+  \label{fig:bodies}
+\end{figure}
+
+
+\subsection{Алгоритмы}
+\label{sec:algs}
+
+\subsection{Тексты программ}
+\label{sec:sources}
+
+\begin{minted}{java}
+/* HelloWorld.java
+ */
+
+public class HelloWorld
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+}
+\end{minted}
+
+\begin{minted}{csharp}
+// Hello3.cs
+// arguments: A B C D
+using System;
+
+public class Hello3
+{
+   public static void Main(string[] args)
+   {
+      Console.WriteLine("Hello, World!");
+      Console.WriteLine("You entered the following {0} command line arguments:",
+         args.Length );
+      for (int i=0; i < args.Length; i++)
+      {
+         Console.WriteLine("{0}", args[i]);
+      }
+   }
+}
+\end{minted}
+
+\chapter{Формальные части}
+\label{cha:formal}
+
+\section{Список литературы}
+\label{sec:refs}
+
+\begin{thebibliography}{99}
+\bibitem{lifecycle} Жизненный цикл программного обеспечения --- Википедия. [электронный ресурс] URL:~\url{https://ru.wikipedia.org/wiki/%D0%96%D0%B8%D0%B7%D0%BD%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%86%D0%B8%D0%BA%D0%BB_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F} (дата обращения: 28.04.2016)
+\end{thebibliography}
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

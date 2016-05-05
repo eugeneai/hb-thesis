@@ -1,0 +1,176 @@
+\documentclass{beamer}
+
+%\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+
+\usepackage[english,russian]{babel}
+%\usepackage[final]{hyperref}
+\usepackage{unicode-math}
+
+
+\setmainfont[Ligatures=TeX,
+ItalicFont={Liberation Serif Italic},
+BoldFont={Liberation Serif Bold},
+BoldItalicFont={Liberation Serif Bold Italic}]{Liberation Serif}
+
+% \setmonofont[
+% Ligatures=TeX,
+% Scale=MatchLowercase,Numbers=SlashedZero,
+% Path=subook/Microsoft/,
+% ItalicFont=couri.ttf,
+% BoldFont=courbd.ttf,
+% BoldItalicFont=courbi.ttf
+% ]{cour.ttf}
+
+
+% \setmainfont[Ligatures=TeX,
+% Path=subook/Microsoft/,
+% ItalicFont=timesi.ttf,
+% BoldFont=timesbd.ttf,
+% BoldItalicFont=timesbi.ttf]{times.ttf}
+% \setmonofont[
+% Ligatures=TeX,
+% Scale=MatchLowercase,Numbers=SlashedZero,
+% Path=subook/Microsoft/,
+% ItalicFont=couri.ttf,
+% BoldFont=courbd.ttf,
+% BoldItalicFont=courbi.ttf
+% ]{cour.ttf}
+% \setsansfont[
+% Ligatures=TeX,
+% Scale=MatchLowercase,
+% Path=subook/Microsoft/,
+% ItalicFont=calibrii.ttf,
+% BoldFont=calibrib.ttf,
+% BoldItalicFont=calibriz.ttf
+% ]{calibri.ttf}
+
+% \setmathfont[
+% Ligatures=TeX,
+% Scale=MatchLowercase,
+% Path=subook/Microsoft/
+% ]{Cambria-Math.ttf}%
+
+% \setmathfont[
+% Ligatures=TeX,
+% Path=\sbk@fontpath Euler/,
+% Scale=MatchLowercase,
+% math-style=upright,
+% vargreek-shape=unicode
+% ]{euler.otf}
+
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{beaver} % or try albatross, beaver, crane, ...
+  \usefonttheme{serif}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+}
+
+%\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset
+{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    %commentstyle=\color{green}
+    keywordstyle=\color{blue},
+    %stringstyle=\color{black}
+    identifierstyle=\color{magenta},
+}
+
+\title[JEEC 2015 Workshop]{\LaTeX{} для организации взаимодействия}
+\author{Alexandre Bernardino}
+\institute{ISR/IST}
+\date{March 9, 2015}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Введение}
+
+\begin{frame}{Motivation}
+	\begin{itemize}
+  		\item Большинство инженеров ленивы \ldots{}, и это, часто, хорошо
+  		\begin{itemize}
+			\item (\textit{lazy} $=$ \textit{to do things in the most efficient way})
+		\end{itemize}
+  		\pause
+  		\item Engineers are terrible story tellers ... they prefer content to form
+  		\pause
+  		\item Readers are lazy ... need self contained and easy to read material
+  		\pause
+  		\item \LaTeX{} can help
+  	\end{itemize}
+\end{frame}
+
+\begin{frame}{Why \LaTeX{} ?}
+	\begin{itemize}
+  		\item If everyone is lazy, why not use \textit{Word} / \textit{PowerPoint} ?
+  		\pause
+  		\item In \textit{Word} / \textit{PowerPoint} it is easy to make bad things.
+  		\pause
+  		\item In \LaTeX{} it is hard to do bad things.
+  		\pause
+  		\item \LaTeX{} automates structure and format so the author can focus on content.
+  		\pause
+  		\item \LaTeX{} keeps text, sections, figures, etc. globally well spaced using cool optimization algorithms!
+  		\pause
+  		\item \LaTeX{} is better to keep uniform the material contributed by different authors.
+	\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+
+    \begin{frame}{Conclusion}
+		\begin{columns}
+			\begin{column}{5cm}
+				\begin{figure}
+   					%\includegraphics[height=4cm]{384px-KnuthAtOpenContentAlliance.jpg}
+				\end{figure}
+			\end{column}
+			\begin{column}{5cm}
+				\begin{flushright}
+					\textit{The ideal situation occurs when
+the things that we regard as beautiful
+are also regarded by other
+people as useful.}
+					\vskip 0.5cm
+				-- Donald Knuth
+				\end{flushright}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
